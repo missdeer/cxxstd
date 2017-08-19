@@ -5,6 +5,8 @@ order: 2
 ---
 
 > 编译器支持最低版本要求:
-> * GCC:
-> * MSVC:
-> * Clang:
+> * GCC: 5.0
+> * MSVC: 19.0
+> * Clang: 3.8
+>
+> 提案: [N3922](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html)

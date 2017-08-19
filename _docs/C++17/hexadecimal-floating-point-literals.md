@@ -5,6 +5,8 @@ order: 2
 ---
 
 > 编译器支持最低版本要求:
-> * GCC:
+> * GCC: 3.0
 > * MSVC:
-> * Clang:
+> * Clang: Yes
+> 
+> 提案: [P0245R1](http://wg21.link/p0245r1)
