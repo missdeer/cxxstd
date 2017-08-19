@@ -1,0 +1,10 @@
+---
+title: 原始字面量字符串
+category: C++11
+order: 2
+---
+
+> 编译器支持情况：
+> * GCC:
+> * MSVC:
+> * Clang:
