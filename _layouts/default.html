@@ -70,11 +70,6 @@
 						<a href="{{ site.baseurl }}/changelog/">{{ changelog.title }}</a>
 					</li>
 				</ul>
-				<ul>
-					<li class="nav-item">
-						<p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
-					</li>
-				</ul>
 			</nav>
 		</header>
 
@@ -86,27 +81,33 @@
 			<article class="content">
 				{{ content }}
 			</article>
+			
+			<div class="content">
+				</hr>
+				<script type="text/javascript" src="//cdn.staticfile.org/jquery/1.11.3/jquery.min.js"></script>
+				<script type="text/javascript" src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+				<script type="text/javascript" src="/scripts/Valine.min.js"></script>
+				<div id="comments" class="comments"></div>
+				<script>
+				  new Valine({
+					  av: AV,
+					  el: '.comments',
+					  notify: false,
+					  verify: false,
+					  app_id: '{{ site.comment.valine.id }}',
+					  app_key: '{{ site.comment.valine.key }}',
+					  placeholder: '请留下您的宝贵意见和建议~'
+				  });
+				</script>
+				<p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+				
+			</div>
 		</section>
 
 		<script>
 			document.getElementById("open-nav").addEventListener("click", function () {
 				document.body.classList.toggle("nav-open");
 			});
-		</script>
-		
-		<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-		<script src="/scripts/Valine.min.js"></script>
-		<div id="comments" class="comments"></div>
-		<script>
-		  new Valine({
-			  av: AV,
-			  el: '.comments',
-			  notify: false,
-			  verify: false,
-			  app_id: '{{ site.comment.valine.id }}',
-			  app_key: '{{ site.comment.valine.key }}',
-			  placeholder: '请留下您的宝贵意见和建议~'
-		  });
 		</script>
 	</body>
 </html>
