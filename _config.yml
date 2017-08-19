@@ -6,6 +6,7 @@ url: "https://cxxstd.minidump.info"
 baseurl: 
 google_analytics_key:
 show_full_navigation: true
+creator:  <a href="https://minidump.info" target="_blank">@missdeer</a>
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
