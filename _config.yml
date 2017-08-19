@@ -3,7 +3,7 @@
 
 title: 不那么新的C++标准学习笔记
 url: "https://cxxstd.minidump.info"
-baseurl: "https://cxxstd.minidump.info"
+baseurl: 
 google_analytics_key:
 show_full_navigation: true
 
@@ -14,10 +14,11 @@ author:
   name: missdeer
   email: me@minidump.info
   twitter: missdeer
-social:
-  name: 不那么新的C++标准学习笔记
-  links:
-    - https://github.com/missdeer/cxxstd
+
+comment:
+    valine:
+        id: g0mzo0XbC3fdm9x3QozgEF45-gzGzoHsz
+        key: 5nIWNiYeU0fqd2YpoVzF4Bir
 
 # -----
 # Build
