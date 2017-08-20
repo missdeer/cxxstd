@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 `auto`代替了声明变量时的强制类型信息如`int`，`int&`，`const int&`，`int&&`等等，但是在使用`auto`时：
 
 1. 必须初始化变量，当然好的编码实践即使不用`auto`也会要求声明变量时立即初始化。
-2. `auto`不能声明为函数返回值（仅C++11而言，C++14中已经修改），不能声明为函数的形参类型（仅C++11而言，C++14中已经修改），不能声明为模板的参数（仅C++11而言？）。
+2. `auto`不能声明为函数返回值（仅C++11而言，[C++14中已经修改](../../C++14/decltype\(auto\)-return-type-deduction-for-normal-functions/)），不能声明为函数的形参类型（仅C++11而言，[C++14中lambda表达式部分已经修改](../../C++14/generic-plymorphic-lambda/)），不能声明为模板的参数（仅C++11而言？）。
 
 另外，由于C++11新增了[初始化列表](../initializer-lists/)功能，使用`auto`自动推导出来的类型可能会有出乎意料的情况：
 
