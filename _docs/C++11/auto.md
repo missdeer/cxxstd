@@ -40,8 +40,12 @@ int main(int argc, char *argv[])
 
 `auto`代替了声明变量时的强制类型信息如`int`，`int&`，`const int&`，`int&&`等等，但是在使用`auto`时：
 
-1. 必须初始化变量，当然好的编码实践即使不用`auto`也会要求声明变量时立即初始化。
-2. `auto`不能声明为函数返回值（仅C++11而言，[C++14中已经修改](../../C++14/decltype(auto)-return-type-deduction-for-normal-functions/)），不能声明为函数的形参类型（仅C++11而言，[C++14中lambda表达式部分已经修改](../../C++14/generic-plymorphic-lambda/)），不能声明为模板的参数（仅C++11而言？）。
+1. 必须初始化变量，当然好的编码实践即使不用`auto`也会要求声明变量时立即初始化
+2. 函数返回值不能是`auto`（仅C++11而言，[C++14中已经修改](../../C++14/decltype(auto)-return-type-deduction-for-normal-functions/)）
+3. 函数的形参类型不能是`auto`，即使指定了默认参数也不行（仅C++11而言，[C++14中lambda表达式部分已经修改](../../C++14/generic-plymorphic-lambda/)）
+4. `auto`不能声明为模板的参数（仅C++11而言？）
+5. 非静态成员变量不能是`auto`的，即使指定了初始值也不行
+6. 不能声明`auto`数组
 
 另外，由于C++11新增了[初始化列表](../initializer-lists/)功能，使用`auto`自动推导出来的类型可能会有出乎意料的情况：
 
@@ -58,7 +62,18 @@ int main(int argc, char *argv[])
 
 `a1`如愿得到`int`类型，而`a3`却跟`a2`是不同的类型，因为初始化列表拥有特有的类型`std::initializer_list<int>`。
 
+一般而言，在以下场合使用`auto`比较合适：
 
+1. 类型名比较长，比如`std::vector<std::string>::iterator`、`std::shared_ptr<std::vector>`等等诸如此类的要声明变量可以使用`auto`
+
+2. 类型名比较难书写，比如临时定义一个[lambda表达式](../lambda/)，又要把它保存到一个变量中以便之后调用，就可以用`auto`：
+
+   ```c++
+   auto f = [&](int n)->int { return n+1; };
+   auto i = f(10);
+   ```
+
+   ​
 
 #### 相关链接
 
