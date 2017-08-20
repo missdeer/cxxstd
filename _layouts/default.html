@@ -8,6 +8,7 @@
 
 		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
 		<link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+		<link rel="stylesheet" type="text/css" href="https://blog.minidump.info/css/pay.css">
 		<link rel="apple-touch-icon" href="{{ site.baseurl }}/apple-touch-icon.png">
 		<link rel="icon" type="image/png" href="{{ site.baseurl }}/touch-icon.png" sizes="192x192">
 		<link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.png">
@@ -83,6 +84,29 @@
 			</article>
 			
 			<div class="content">
+				<div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+				<div style="line-height:2.5;">感觉本站不错，不妨小额赞助我一下！</div>
+				<button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+					<span>打赏</span>
+				</button>
+				<div id="QR" style="display: none;">
+					<div id="wechat" style="display: inline-block">
+						<a href="https://blog.minidump.info/assets/images/wepay.jpg" class="fancybox" rel="group">
+						<img id="wechat_qr" src="https://blog.minidump.info/assets/images/wepay.jpg" alt="missdeer WeChat Pay">
+						</a>
+						<p>微信扫一扫</p>
+					</div>
+					<div id="wechat" style="display: inline-block">
+						<a href="https://blog.minidump.info/assets/images/alipay.jpg" class="fancybox" rel="group">
+						<img id="alipay_qr" src="https://blog.minidump.info/assets/images/alipay.jpg" alt="missdeer AliPay">
+						</a>
+						<p>支付宝扫一扫</p>
+					</div>
+				</div>
+				</div>
+		  	</div>
+
+			<div class="content">
 				</hr>
 				<script type="text/javascript" src="//cdn.staticfile.org/jquery/1.11.3/jquery.min.js"></script>
 				<script type="text/javascript" src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
@@ -104,7 +128,7 @@
 				</div>
 			</div>
 		</section>
-
+		
 		<script>
 			document.getElementById("open-nav").addEventListener("click", function () {
 				document.body.classList.toggle("nav-open");
