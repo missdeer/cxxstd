@@ -22,4 +22,4 @@ title: 前言
 
 ## C++20（2a？）
 
-截止到目前（{{site.time}}），标准文档可参考草稿[N4687](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4687.pdf)。
+截止到目前（{{site.time | date: "%F" }}），标准文档可参考草稿[N4687](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4687.pdf)。
