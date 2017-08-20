@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 
 一般而言，在以下场合使用`auto`比较合适：
 
-1. 类型名比较长，比如`std::vector<std::string>::iterator`、`std::shared_ptr<std::vector>`等等诸如此类的要声明变量可以使用`auto`
+1. 类型名比较长，比如`std::vector<std::string>::iterator`， `std::shared_ptr<std::vector>`等等诸如此类的要声明变量可以使用`auto`
 
 2. 类型名比较难书写，比如临时定义一个[lambda表达式](../lambda/)，又要把它保存到一个变量中以便之后调用，就可以用`auto`：
 
@@ -78,4 +78,9 @@ int main(int argc, char *argv[])
 #### 相关链接
 
 * [decltype](../decltype/)
+* [Lambda表达式](../lambda/)
+* [初始化列表](../initializer-lists/)
+* [普通函数返回值类型推导](../../C++14/decltype(auto)-return-type-deduction-for-normal-functions/)
+* [Lambda表达式的泛型和多态](../../C++14/generic-plymorphic-lambda/)
 * [获取变量精确类型的示例（GCC，Clang可用）](http://cpp.sh/6puaz)
+

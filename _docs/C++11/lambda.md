@@ -10,3 +10,4 @@ order: 2
 > * Clang: 3.1
 >
 > 提案: v0.9 - [N2550](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2550.pdf)/v1.0 - [N2658](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2658.pdf)/v1.1 - [N2927](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2009/n2927.pdf)
+
