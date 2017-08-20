@@ -63,3 +63,4 @@ int main(int argc, char *argv[])
 #### 相关阅读
 
 * [decltype](../decltype/)
+* [获取变量精确类型的示例（GCC，Clang可用）](http://cpp.sh/6puaz)
