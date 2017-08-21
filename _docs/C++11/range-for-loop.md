@@ -40,6 +40,17 @@ for (const auto& s : coll) {
 }
 ```
 
+`std::map`是按`std::pair`迭代的，所以：
+
+```c++
+std::map<std::string, std::string> mm;
+for ( const auto& m : mm ) {
+    std::cout  << m.first << " < " << m.second << ">" << std::endl;
+}   
+```
+
+
+
 一般而言，如下一组基于范围的for循环：
 
 ```c++
@@ -64,6 +75,11 @@ for ( for-range-declaration : expression )
 1. 如果`__RangeT`是数组类型，则`begin-expr`和`end-expr`分别等于`__range`和`__range + __bound`，相应的`__bound`是数组边界。因此如此`__RangeT`是不知大小的数组，或者不完整类型（有声明没定义）的数组，那么程序就不合法。
 2. 否则，`begin-expr`和`end-expr`分别等于`begin(__range)`和`end(__range)`，相应的`begin`和`end`会根据参数进行查找，其实基本上就是`std::begin()`和`std::end()`。
 3. `__begin`和`__end`具有相同的类型，在C++17中[放宽了这个限制](../../C++17/differing-begin-and-end-types-in-range-based-for/)。
+
+目前C++标准库中所有容器，`std::string`和数组都能用这种基于范围的for循环遍历，如果想要让自己的数据结构也支持这种语法，需要满足以下要求：
+
+1. 能对此自定义数据结构类型调用`begin`和`end`方法，无论是成员函数或者独立函数都可以，要能返回迭代器类型。
+2. 返回的迭代器类型必须支持`operator*`方法，`operator!=`方法和前缀形式的`operator++`方法，同样无论是成员函数或独立函数都可以。
 
 
 
