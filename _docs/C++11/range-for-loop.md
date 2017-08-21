@@ -40,7 +40,7 @@ for (const auto& s : coll) {
 }
 ```
 
-`std::map`是按`std::pair`迭代的，所以：
+`std::map`是按`std::pair`迭代的，所以要这样遍历`std::map`：
 
 ```c++
 std::map<std::string, std::string> mm;
