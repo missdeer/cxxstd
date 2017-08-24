@@ -58,6 +58,23 @@ Lambda表达式就是匿名函数，在C++11之前Boost凭借C++语言强大的t
 
 * 按值传递的捕捉项在lambda表达式被定义时就已经决定。
 * 按引用传递的捕捉项在lambda表达式被调用时决定。
+* 按值传递的捕捉变量不能被lambda表达式内修改，按引用传递的可以。
 * 从代码生成角度看，如果是内建数据类型（int，short，long之类的）如果以引用传递方式会比以值传递方式多一条获取变量地址的指令。
 
 Lambda表达式在功能上跟仿函数（functor，也称函数对象，function object）非常相似：可以保存外部变量的状态，可以传入参数，可以被调用。编译器在实现lambda表达式时也采用了与仿函数相似的方法。
+
+每个lambda表达式都有自己特有的类型，也就是说不能仅仅因为捕捉列表、参数列表、返回值类型相同而把一个lambda表达式赋给另一个保存着lambda表达式的变量，却可以把一个保存了lambda表达式的变量赋给另一个变量：
+
+```c++
+auto f = [](int n)->int { return n;};
+decltype(f) f2 = f; // 正确
+decltype(f) f3 = [](int n)->int { return n;};  // 编译错误
+```
+
+Lambda表达式在C++中最典型的应用场景是作为被回调体，比如STL诸多算法需要提供谓词（predicate），简短的lambda比函数指针和仿函数都要更适合承担这份工作。
+
+#### 相关链接
+
+- [Lambda表达式可以捕获*this](../../C++17/lambda-capture-of-star-this/)
+- [Lambda表达式的泛型和多态](../../C++14/generic-plymorphic-lambda/)
+
