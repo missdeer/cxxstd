@@ -1,5 +1,5 @@
 ---
-title: Inline名字空间
+title: 内联名字空间
 category: C++11
 order: 2
 ---
