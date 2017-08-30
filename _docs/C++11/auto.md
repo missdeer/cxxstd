@@ -75,7 +75,7 @@ int main(int argc, char *argv[])
 
 3. [Scott Meyers](https://en.wikipedia.org/wiki/Scott_Meyers)在[《Effective Modern C++》](https://www.amazon.com/Effective-Modern-Specific-Ways-Improve/dp/1491903996)中提议优先使用`auto`，这也许是一种趋势。
 
-#### 相关链接
+## 相关链接
 
 * [decltype](../decltype/)
 * [Lambda表达式](../lambda/)
