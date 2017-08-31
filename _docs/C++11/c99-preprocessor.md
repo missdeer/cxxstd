@@ -74,7 +74,24 @@ order: 2
   2. 其他带前缀的多个字符串字面量连接定义行为未标准化，由编译器自行定义实现
 
 
-* 诊断头文件和包含的名字。
+* 诊断`#include`包含的头文件的名字。
+
+  是个奇怪的特性，如果`#include`语句后面包含的头文件（路径）第一个字符是个数字，则编译器会警告，比如：
+
+  ```c++
+  // inc.cpp
+
+  #include "0x/header.h"
+  ```
+
+  这个代码编译时大概会输出如下的警告：
+
+  ```
+  "inc.cpp", line 1.10: 1540-0893 (W) The header file name "0x/header.h" 
+  in #include directive shall not start with a digit.
+  ```
+
+  好像没什么用。
 
 * 增加`#line`预处理指令的上限。
 
