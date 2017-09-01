@@ -50,6 +50,18 @@ C++11中，右值（rvalue）又细分为将亡值（xvalue，eXpiring value）�
 1. 纯右值就是C++11之前标准中的右值
 2. 将亡值是C++11新增的跟右值引用相关的表达式，比如返回右值引用`T&&`的函数返回值，`std::move`的返回值，转换为`T&&`的类型转换函数的返回值
 
+## 推导函数返回值类型
+
+配合`auto`和`decltype`，可以自动推导函数返回值类型：
+
+```c++
+template<class T, class U>
+auto add(T t, U u) -> decltype(t + u) // the return type is the type of operator+(T, U)
+{
+    return t + u;
+}
+```
+
 ## 相关链接
 
 * [decltype示例代码](http://cpp.sh/4ulo)

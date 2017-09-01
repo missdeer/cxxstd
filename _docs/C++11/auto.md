@@ -38,6 +38,20 @@ int main(int argc, char *argv[])
 }
 ```
 
+还有了新式的函数声明形式：
+
+```c++
+auto get_fun(int arg) -> double (*)(double) // same as: double (*get_fun(int))(double)
+{
+    switch (arg)
+    {
+        case 1: return std::fabs;
+        case 2: return std::sin;
+        default: return std::cos;
+    }
+}
+```
+
 `auto`代替了声明变量时的强制类型信息如`int`，`int&`，`const int&`，`int&&`等等，但是在使用`auto`时：
 
 1. 必须初始化变量，当然好的编码实践即使不用`auto`也会要求声明变量时立即初始化
