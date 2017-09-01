@@ -122,9 +122,15 @@ _Pragma("warning(disable: 4996)");
 ```c++
 #define COMPILED_ONCE _Pragma("once")
 ```
-## 变长参数宏定义和空宏参数
+## 变长参数宏定义
 
+C++11增加了`__VA_ARGS__`用于处理变长参数的宏定义：
 
+```c++
+#define PR(...) printf(__VA_ARGS__)
+```
+
+看来唯一的作用就是把宏定义的变长参数转为函数的变长参数。
 
 ## 预定义宏
 
