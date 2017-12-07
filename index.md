@@ -30,15 +30,15 @@ $gcc -std=c++14 -o test main.cpp
 $clang -std=c++14 -o test main.cpp
 ```
 
-## C++17（1z？）
+## C++17
 
 标准文档可参考最终版草稿[N4659](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4659.pdf)。
 
-MSVC可以直接支持编译C++17代码，但只支持很少几个特性，GCC和Clang需要在命令行参数指定`-std=c++1z`，如：
+MSVC可以直接支持编译C++17代码，但只支持很少几个特性，GCC和Clang需要在命令行参数指定`-std=c++17`，如：
 
 ```shell
-$gcc -std=c++1z -o test main.cpp
-$clang -std=c++1z -o test main.cpp
+$gcc -std=c++17 -o test main.cpp
+$clang -std=c++17 -o test main.cpp
 ```
 
 ## C++20（2a？）
