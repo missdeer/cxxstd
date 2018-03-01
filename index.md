@@ -54,5 +54,5 @@ $clang -std=c++2a -o test main.cpp
 
 ## 注意
 
-GCC和Clang除了以上`-std=c++11`, `-std=c++14`, `-std=c++1z`和`-std=c++2a`选项外，还有对应的GNU版本`-std=gnu++11`, `-std=gnu++14`, `-std=gnu++1z`和`-std=gnu++2a`，两者的区别在于后者多支持了GNU对C++语言的[扩展](https://gcc.gnu.org/onlinedocs/gcc/C_002b_002b-Extensions.html)，如果程序注意可移植性的话，比如需要用MSVC进行编译，则不应该使用[GNU扩展](https://gcc.gnu.org/onlinedocs/gcc/C_002b_002b-Extensions.html)。
+GCC和Clang除了以上`-std=c++11`, `-std=c++14`, `-std=c++17`和`-std=c++2a`选项外，还有对应的GNU版本`-std=gnu++11`, `-std=gnu++14`, `-std=gnu++17`和`-std=gnu++2a`，两者的区别在于后者多支持了GNU对C++语言的[扩展](https://gcc.gnu.org/onlinedocs/gcc/C_002b_002b-Extensions.html)，如果程序注意可移植性的话，比如需要用MSVC进行编译，则不应该使用[GNU扩展](https://gcc.gnu.org/onlinedocs/gcc/C_002b_002b-Extensions.html)。
 
