@@ -12,14 +12,47 @@ title: 前言
 
 标准文档可参考最终版草稿[N3337](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3337.pdf)，它与正式版标准文档(N3338)仅有微小的[差异](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3338.html)。官方标准文档[ISO/IEC 14882:2014 (2016)](https://webstore.ansi.org/RecordDetail.aspx?sku=INCITS/ISO/IEC+14882:2014+\(2016\))已合入C++14的内容。
 
+MSVC可以直接支持编译C++11代码，GCC和Clang需要在命令行参数指定`-std=c++11`，如：
+
+```shell
+$gcc -std=c++11 -o test main.cpp
+$clang -std=c++11 -o test main.cpp
+```
+
 ## C++14
 
 标准文档可参考最终版草稿[N4140](https://github.com/cplusplus/draft/blob/master/papers/n4140.pdf?raw=true)，它与正式版标准文档(N4141)仅有微小的[差异](https://github.com/cplusplus/draft/compare/n4140...n4141)。也可购买[ISO/IEC 14882:2014 (2016)](https://webstore.ansi.org/RecordDetail.aspx?sku=INCITS/ISO/IEC+14882:2014+\(2016\))。
+
+MSVC可以直接支持编译C++14代码，GCC和Clang需要在命令行参数指定`-std=c++14`，如：
+
+```shell
+$gcc -std=c++14 -o test main.cpp
+$clang -std=c++14 -o test main.cpp
+```
 
 ## C++17
 
 标准文档可参考最终版草稿[N4659](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4659.pdf)。
 
+MSVC可以直接支持编译C++17代码，但只支持很少几个特性，GCC和Clang需要在命令行参数指定`-std=c++17`，如：
+
+```shell
+$gcc -std=c++17 -o test main.cpp
+$clang -std=c++17 -o test main.cpp
+```
+
 ## C++20（2a？）
 
-截止到目前（{{site.time}}），标准文档可参考草稿[N4687](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4687.pdf)。
+截止到目前（{{site.time | date: "%F" }}），标准文档可参考草稿[N4713](https://github.com/cplusplus/draft/raw/master/papers/n4713.pdf)。
+
+GCC和Clang需要在命令行参数指定`-std=c++2a`，如：
+
+```shell
+$gcc -std=c++2a -o test main.cpp
+$clang -std=c++2a -o test main.cpp
+```
+
+## 注意
+
+GCC和Clang除了以上`-std=c++11`, `-std=c++14`, `-std=c++17`和`-std=c++2a`选项外，还有对应的GNU版本`-std=gnu++11`, `-std=gnu++14`, `-std=gnu++17`和`-std=gnu++2a`，两者的区别在于后者多支持了GNU对C++语言的[扩展](https://gcc.gnu.org/onlinedocs/gcc/C_002b_002b-Extensions.html)，如果程序注意可移植性的话，比如需要用MSVC进行编译，则不应该使用[GNU扩展](https://gcc.gnu.org/onlinedocs/gcc/C_002b_002b-Extensions.html)。
+
