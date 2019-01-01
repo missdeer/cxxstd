@@ -8,10 +8,10 @@
 
 		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
 		<link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
-		<link rel="stylesheet" type="text/css" href="https://blog.minidump.info/css/pay.css">
-		<link rel="apple-touch-icon" href="{{ site.baseurl }}/apple-touch-icon.png">
-		<link rel="icon" type="image/png" href="{{ site.baseurl }}/touch-icon.png" sizes="192x192">
-		<link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.png">
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/missdeer/blog@gh-pages/css/pay.min.css">
+		<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/missdeer/cxxstd@gh-pages/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/missdeer/cxxstd@gh-pages/touch-icon.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/missdeer/cxxstd@gh-pages/images/favicon.png">
 
 		{% feed_meta %}
 		{% seo %}
@@ -32,7 +32,7 @@
 	<body>
 		<header>
 			<h1>
-				<a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/emblem.svg" width="40" height="40" alt="{{ site.title }} logo"></a>
+				<a href="{{ site.baseurl }}/"><img src="https://cdn.jsdelivr.net/gh/missdeer/cxxstd@gh-pages/images/emblem.svg" width="40" height="40" alt="{{ site.title }} logo"></a>
 				{{ site.title }}
 				<button type="button" class="open-nav" id="open-nav"></button>
 			</h1>
@@ -91,14 +91,14 @@
 				</button>
 				<div id="QR" style="display: none;">
 					<div id="wechat" style="display: inline-block">
-						<a href="https://blog.minidump.info/assets/images/wepay.jpg" class="fancybox" rel="group">
-						<img id="wechat_qr" src="https://blog.minidump.info/assets/images/wepay.jpg" alt="missdeer WeChat Pay">
+						<a href="https://cdn.jsdelivr.net/gh/missdeer/blog@gh-pages/assets/images/wepay.jpg" class="fancybox" rel="group">
+						<img id="wechat_qr" src="https://cdn.jsdelivr.net/gh/missdeer/blog@gh-pages/assets/images/wepay.jpg" alt="missdeer WeChat Pay">
 						</a>
 						<p>微信扫一扫</p>
 					</div>
 					<div id="wechat" style="display: inline-block">
-						<a href="https://blog.minidump.info/assets/images/alipay.jpg" class="fancybox" rel="group">
-						<img id="alipay_qr" src="https://blog.minidump.info/assets/images/alipay.jpg" alt="missdeer AliPay">
+						<a href="https://cdn.jsdelivr.net/gh/missdeer/blog@gh-pages/assets/images/alipay.jpg" class="fancybox" rel="group">
+						<img id="alipay_qr" src="https://cdn.jsdelivr.net/gh/missdeer/blog@gh-pages/assets/images/alipay.jpg" alt="missdeer AliPay">
 						</a>
 						<p>支付宝扫一扫</p>
 					</div>
@@ -108,9 +108,9 @@
 
 			<div class="content">
 				</hr>
-				<script type="text/javascript" src="//cdn.staticfile.org/jquery/1.11.3/jquery.min.js"></script>
-				<script type="text/javascript" src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-				<script type="text/javascript" src='//unpkg.com/valine/dist/Valine.min.js'></script>
+				<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jquery/jquery@1.11.3/dist/jquery.min.js"></script>
+				<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/leancloud/javascript-sdk@v3.0.4/dist/av-min.js"></script>
+				<script type="text/javascript" src='https://cdn.jsdelivr.net/gh/xCss/Valine/dist/Valine.min.js'></script>
 				<div id="comments" class="comments"></div>
 				<script>
 				  new Valine({
