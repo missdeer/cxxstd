@@ -74,7 +74,7 @@ for ( for-range-declaration : expression )
 
 1. 如果`__RangeT`是数组类型，则`begin-expr`和`end-expr`分别等于`__range`和`__range + __bound`，相应的`__bound`是数组边界。因此如此`__RangeT`是不知大小的数组，或者不完整类型（有声明没定义）的数组，那么程序就不合法。
 2. 如果`__RangeT`类型拥有`begin()`和`end()`成员函数，则`begin-expr`和`end-expr`分别等于`__range.begin()`和`__range.end()`。
-3. 否则，`begin-expr`和`end-expr`分别等于`begin(__range)`和`end(__range)`，使用[实参依赖查找算法](http://en.cppreference.com/w/cpp/language/adl)进行查找，其实基本上就是`std::begin()`和`std::end()`。
+3. 否则，`begin-expr`和`end-expr`分别等于`begin(__range)`和`end(__range)`，使用[参数依赖查找算法](https://zh.cppreference.com/w/cpp/language/adl)进行查找，其实基本上就是`std::begin()`和`std::end()`。
 4. `__begin`和`__end`具有相同的类型，在C++17中[放宽了这个限制](../../C++17/differing-begin-and-end-types-in-range-based-for/)。
 
 目前C++标准库中所有容器，`std::string`和数组都能用这种基于范围的for循环遍历，如果想要让自己的数据结构也支持这种语法，需要满足以下要求：
