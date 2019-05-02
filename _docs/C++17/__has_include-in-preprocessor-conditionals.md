@@ -11,7 +11,7 @@ order: 2
 >
 > 提案: [P0061R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0061r1.html)
 
-可用于在预处理阶段检测某个头文件是否已经被include：
+可用于在预处理阶段检测某个头文件是否存在并可被include：
 
 ```c++
 #if __has_include(<optional>)
