@@ -116,12 +116,13 @@
 				</hr>
 				<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jquery/jquery@1.11.3/dist/jquery.min.js"></script>
 				<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/leancloud/javascript-sdk@v3.0.4/dist/av-min.js"></script>
-				<script type="text/javascript" src='https://cdn.jsdelivr.net/gh/xCss/Valine/dist/Valine.min.js'></script>
+				<script type="text/javascript" src='https://cdn.jsdelivr.net/gh/DesertsP/Valine/dist/Valine.min.js'></script>
 				<div id="comments" class="comments"></div>
 				<script>
 				  new Valine({
 					  av: AV,
 					  el: '.comments',
+            smiles_url: 'https://minidump.info/blog/media/smiles',
 					  notify: false,
 					  verify: false,
 					  app_id: '{{ site.comment.valine.id }}',
