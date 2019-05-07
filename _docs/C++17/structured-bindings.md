@@ -47,6 +47,9 @@ Coordinate origin() {
 }
 
 const auto [ x, y ] = origin();
+
+int a[3] = {1,2,3};
+auto [a1, a2, a3] = a;
 ```
 
 这种写法大大简化了代码，不但能达到C++11中引入的`std::get`和`std::tie`的效果，还增加了对聚合类型的结构体以及普通数组的支持。
