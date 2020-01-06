@@ -114,22 +114,6 @@
 
 			<div class="content">
 				</hr>
-				<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jquery/jquery@1.11.3/dist/jquery.min.js"></script>
-				<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/leancloud/javascript-sdk@v3.0.4/dist/av-min.js"></script>
-				<script type="text/javascript" src='https://cdn.jsdelivr.net/gh/DesertsP/Valine/dist/Valine.min.js'></script>
-				<div id="comments" class="comments"></div>
-				<script>
-				  new Valine({
-					  av: AV,
-					  el: '.comments',
-            smiles_url: 'https://minidump.info/blog/media/smiles',
-					  notify: false,
-					  verify: false,
-					  app_id: '{{ site.comment.valine.id }}',
-					  app_key: '{{ site.comment.valine.key }}',
-					  placeholder: '请留下您的宝贵意见和建议~'
-				  });
-				</script>
 				<div style="color:#b3b3b3; font-size:.7em;">
 					<p>Hosted by <a href="https://pages.github.com/" style="font-weight: bold">Github Pages</a>, 本站{% if site.creator %}由 {{site.creator}} 创建，由 <a href="https://jekyllrb.com" target="_blank">Jekyll</a> 于 {{ site.time | date: "%F" }} 生成，{% endif %}感谢<a href="https://github.com/CloudCannon" target="_blank"> CloudCannon </a>制作的theme： <a href="https://github.com/CloudCannon/edition-jekyll-template" target="_blank">Edition</a> ，感谢<a href="https://letsencrypt.org/" target="_blank"> Let's Encrypt </a>提供免费的SSL证书服务。本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。&copy; {{site.time | date: "%Y"}}</p>
 				</div>
