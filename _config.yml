@@ -2,8 +2,8 @@
 # Site
 
 title: 不那么新的C++标准学习笔记
-url: "https://minidump.info"
-baseurl:
+url: "https://missdeer.github.io"
+baseurl: /cxxstd
 google_analytics_key: UA-52744860-1 
 show_full_navigation: true
 creator:  <a href="https://minidump.info" target="_blank">@missdeer</a>
@@ -16,10 +16,10 @@ author:
   email: me@minidump.info
   twitter: missdeer
 
-comment:
-    valine:
-        id: g0mzo0XbC3fdm9x3QozgEF45-gzGzoHsz
-        key: 5nIWNiYeU0fqd2YpoVzF4Bir
+#comment:
+#    valine:
+#        id: g0mzo0XbC3fdm9x3QozgEF45-gzGzoHsz
+#        key: 5nIWNiYeU0fqd2YpoVzF4Bir
 
 # -----
 # Build
