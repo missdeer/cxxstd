@@ -1,0 +1,50 @@
+name: Build Blog
+
+on: 
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@v2
+
+    - name: Set up Go 1.14
+      uses: actions/setup-go@v1
+      with:
+        go-version: 1.14
+      id: go
+
+    - name: Set up Ruby 2.6
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 2.6
+
+    - name: Build site
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}    
+      run: |      
+        gem install bundler        
+        bundle install
+        rm -rf plantuml-cmd _plantuml _site 
+        git clone --depth=1 https://github.com/missdeer/plantuml-cmd.git 
+        cd plantuml-cmd 
+        go build 
+        sudo mv plantuml-cmd /usr/local/bin/plantuml-cmd
+        cd ..         
+        sed -i '/baseurl/d' _config.yml 
+        sed -i 's/minidump.info/missdeer.github.io/g' _config.yml 
+        cat _config.yml 
+        bundle exec jekyll build --trace
+        cd _site
+        git init
+        git add .
+        git config user.name "update-blog[bot]"
+        git config user.email "update-blog[bot]@users.noreply.github.com"
+        git commit -m "update blog at $(date)" .
+        git push --force --quiet https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git master:gh-pages
