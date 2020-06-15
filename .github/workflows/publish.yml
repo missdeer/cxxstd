@@ -25,25 +25,52 @@ jobs:
       with:
         ruby-version: 2.6
 
-    - name: Build site
-      env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}    
+    - name: Setup bundler
       run: |      
         gem install bundler        
         bundle install
+        
+    - name: Setup plantuml-cmd tool
+      run: |      
         rm -rf plantuml-cmd _plantuml _site 
         git clone --depth=1 https://github.com/missdeer/plantuml-cmd.git 
         cd plantuml-cmd 
         go build 
         sudo mv plantuml-cmd /usr/local/bin/plantuml-cmd
-        cd ..         
+        cd ..
+        rm -rf plantuml-cmd
+        
+    - name: Setup minify tool
+      run: |      
+        git clone --depth=1 https://github.com/tdewolff/minify.git
+        cd minify/cmd/minify
+        go build -ldflags "-s -w -X 'main.Version=$(git describe --tags)'" -trimpath
+        sudo mv minify /usr/local/bin/minify
+        cd ../../..
+        rm -rf minify
+                
+    - name: Build site
+      run: |      
         sed -i 's/minidump.info/missdeer.github.io/g' _config.yml 
         cat _config.yml 
         bundle exec jekyll build --trace
+                
+    - name: Minify files
+      run: |      
+        cd _site
+        find . -name '*.html' -type f -print | while read file; do /usr/local/bin/minify -o $file $file; done
+        find . -name '*.css' -type f -print | while read file; do /usr/local/bin/minify -o $file $file; done
+        find . -name '*.js' -type f -print | while read file; do /usr/local/bin/minify -o $file $file; done
+        cd ..
+        
+    - name: Deploy to GitHub Pages
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}    
+      run: |    
         cd _site
         git init
         git add .
         git config user.name "update-blog[bot]"
         git config user.email "update-blog[bot]@users.noreply.github.com"
-        git commit -m "update blog at $(date)" .
+        git commit -m "update cxxstd at $(date)" .
         git push --force --quiet https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git master:gh-pages
