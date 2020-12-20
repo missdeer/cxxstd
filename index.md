@@ -43,7 +43,7 @@ $clang -std=c++17 -o test main.cpp
 
 ## C++20
 
-截止到目前（{{site.time | date: "%F" }}），标准文档可参考草稿[N4810](https://github.com/cplusplus/draft/raw/master/papers/n4810.pdf)。
+标准文档可参考最终版草稿最终版草稿（即DIS，Draft International Standard）[N4860](https://cdn.jsdelivr.net/gh/missdeer/cxxstd@gh-pages/_docs/C++20/n4860.pdf)。也可以购买[ISO/IEC 14882:2020](https://www.iso.org/standard/79358.html)。
 
 GCC和Clang需要在命令行参数指定`-std=c++2a`，如：
 
