@@ -1,0 +1,21 @@
+#!/bin/bash
+year=`date +%Y`
+month=`date +%m`
+day=`date +%d`
+title="$year-$month-$day-$1.md"
+echo '---' > "_posts/$title"
+echo 'title: ""' >> "_posts/$title"
+echo 'type: ' >> "_posts/$title"
+echo '---' >> "_posts/$title"
+editor="${2}"
+case ${editor} in
+    -v) vim "_posts/$title"
+        ;;
+    -m) open /Applications/MacDown.app/ --args "$PWD/_posts/$title"
+        ;;
+    -t) open /Applications/Typora.app/ --args "$PWD/_posts/$title"
+        ;;
+    *) vim "_posts/$title"
+        ;;
+esac
+
