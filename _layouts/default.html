@@ -127,47 +127,6 @@
 						<p>支付宝扫一扫</p>
 					</div>
 				</div>
-				<div style="line-height:2.5;font-size:12px;">如果你有Visa、MasterCard之类的国际银行卡，也可以考虑以下选项：</div>
-				<div>
-					<script src="https://js.stripe.com/v3"></script>
-					<button id="buy-me-a-cocacola-button" title="请我喝罐可乐，需要Visa、MasterCard、JCB、AmericanExpress等国际银行卡"
-						role="link">
-						<span>可乐</span>
-					</button>
-					<script>
-						var stripe = Stripe('pk_live_tyj6HryOAzYDsRHA3uYjVHIq');
-
-						var buyMeACocacolaButton = document.querySelector('#buy-me-a-cocacola-button');
-						buyMeACocacolaButton.addEventListener('click', function () {
-							stripe.redirectToCheckout({
-								items: [{
-									sku: 'sku_FfVDZvhOKOxwCH',
-									quantity: 1
-								}],
-								successUrl: '{{ site.url }}{{site.baseurl}}{{ page.url }}',
-								cancelUrl: '{{ site.url }}{{site.baseurl}}{{ page.url }}'
-							});
-						});
-					</script>
-					<button id="buy-me-a-coffee-button" title="请我喝杯咖啡，需要Visa、MasterCard、JCB、AmericanExpress等国际银行卡"
-						role="link">
-						<span>咖啡</span>
-					</button>
-					<script>
-
-						var buyMeACoffeeButton = document.querySelector('#buy-me-a-coffee-button');
-						buyMeACoffeeButton.addEventListener('click', function () {
-							stripe.redirectToCheckout({
-								items: [{
-									sku: 'sku_FfVEVxmUzZB1pm',
-									quantity: 1
-								}],
-								successUrl: '{{ site.url }}{{site.baseurl}}{{ page.url }}',
-								cancelUrl: '{{ site.url }}{{site.baseurl}}{{ page.url }}'
-							});
-						});
-					</script>
-				</div>
 			</div>
 		</div>
 
