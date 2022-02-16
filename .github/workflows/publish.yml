@@ -14,10 +14,10 @@ jobs:
 
     - uses: actions/checkout@v2
 
-    - name: Set up Go 1.15
+    - name: Set up Go 1.17
       uses: actions/setup-go@v1
       with:
-        go-version: 1.15
+        go-version: 1.17
       id: go
 
     - name: Set up Ruby 2.6
@@ -51,7 +51,7 @@ jobs:
                 
     - name: Build site
       run: |      
-        sed -i 's/minidump.info/missdeer.github.io/g' _config.yml 
+        sed -i 's/cxxstd//g' _config.yml 
         cat _config.yml 
         bundle exec jekyll build --trace
                 
