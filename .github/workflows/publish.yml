@@ -51,7 +51,7 @@ jobs:
                 
     - name: Build site
       run: |      
-        sed -i '/cxxstd/d' _config.yml 
+        sed -i 's/\/cxxstd/""/g' _config.yml 
         cat _config.yml 
         bundle exec jekyll build --trace
                 
