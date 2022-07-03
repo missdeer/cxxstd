@@ -20,10 +20,10 @@ jobs:
         go-version: 1.18.3
       id: go
 
-    - name: Set up Ruby 2.7
+    - name: Set up Ruby 2.6
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.7
+        ruby-version: 2.6
         bundler-cache: true
 
     - name: Setup bundler
