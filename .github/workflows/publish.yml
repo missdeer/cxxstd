@@ -55,7 +55,9 @@ jobs:
         sed -i 's/\/cxxstd/""/g' _config.yml 
         cat _config.yml 
         bundle exec jekyll build --trace
-                
+      env:
+        JEKYLL_ENV: production
+        
     - name: Minify files
       run: |      
         cd _site
