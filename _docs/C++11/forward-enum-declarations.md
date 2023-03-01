@@ -1,5 +1,5 @@
 ---
-title: 转发枚举声明
+title: 前向声明枚举类型
 category: C++11
 order: 2
 ---
