@@ -43,16 +43,27 @@ $clang -std=c++17 -o test main.cpp
 
 ## C++20
 
-标准文档可参考最终版草稿最终版草稿（即DIS，Draft International Standard）[N4860](https://cdn.jsdelivr.net/gh/missdeer/cxxstd@gh-pages/C++20/N4860.pdf)。也可以购买[ISO/IEC 14882:2020](https://www.iso.org/standard/79358.html)。
+标准文档可参考最终版草稿（即DIS，Draft International Standard）[N4860](https://cdn.jsdelivr.net/gh/missdeer/cxxstd@gh-pages/C++20/N4860.pdf)。也可以购买[ISO/IEC 14882:2020](https://www.iso.org/standard/79358.html)。
 
-GCC和Clang需要在命令行参数指定`-std=c++2a`，如：
+GCC和Clang需要在命令行参数指定`-std=c++20`，如：
 
 ```shell
-$gcc -std=c++2a -o test main.cpp
-$clang -std=c++2a -o test main.cpp
+$gcc -std=c++20 -o test main.cpp
+$clang -std=c++20 -o test main.cpp
+```
+
+## C++23
+
+标准文档可参考最新版草稿（即DIS，Draft International Standard）[N4950](https://open-std.org/jtc1/sc22/wg21/docs/papers/2023/n4950.pdf)。
+
+GCC和Clang需要在命令行参数指定`-std=c++23`，如：
+
+```shell
+$gcc -std=c++23 -o test main.cpp
+$clang -std=c++23 -o test main.cpp
 ```
 
 ## 注意
 
-GCC和Clang除了以上`-std=c++11`, `-std=c++14`, `-std=c++17`和`-std=c++2a`选项外，还有对应的GNU版本`-std=gnu++11`, `-std=gnu++14`, `-std=gnu++17`和`-std=gnu++2a`，两者的区别在于后者多支持了GNU对C++语言的[扩展](https://gcc.gnu.org/onlinedocs/gcc/C_002b_002b-Extensions.html)，如果程序注意可移植性的话，比如需要用MSVC进行编译，则不应该使用[GNU扩展](https://gcc.gnu.org/onlinedocs/gcc/C_002b_002b-Extensions.html)。
+GCC和Clang除了以上`-std=c++11`, `-std=c++14`, `-std=c++17`和`-std=c++20`选项外，还有对应的GNU版本`-std=gnu++11`, `-std=gnu++14`, `-std=gnu++17`和`-std=gnu++20`，两者的区别在于后者多支持了GNU对C++语言的[扩展](https://gcc.gnu.org/onlinedocs/gcc/C_002b_002b-Extensions.html)，如果程序注意可移植性的话，比如需要用MSVC进行编译，则不应该使用[GNU扩展](https://gcc.gnu.org/onlinedocs/gcc/C_002b_002b-Extensions.html)。
 
