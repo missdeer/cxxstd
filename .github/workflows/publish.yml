@@ -26,11 +26,6 @@ jobs:
         ruby-version: 2.6
         bundler-cache: true
 
-    - name: Setup bundler
-      run: |      
-        gem install bundler        
-        bundle install
-        
     - name: Setup plantuml-cmd tool
       run: |      
         rm -rf plantuml-cmd _plantuml _site 
