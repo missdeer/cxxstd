@@ -10,7 +10,7 @@ title: 前言
 
 ## C++11
 
-标准文档可参考最终版草稿[N3337](https://cdn.jsdelivr.net/gh/missdeer/cxxstd@gh-pages/_docs/C++11/n3337.pdf)，它与正式版标准文档(N3338)仅有微小的[差异](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3338.html)。官方标准文档[ISO/IEC 14882:2014 (2016)](https://webstore.ansi.org/RecordDetail.aspx?sku=INCITS/ISO/IEC+14882:2014+\(2016\))已合入C++14的内容。
+标准文档可参考最终版草稿[N3337](https://cdn.jsdelivr.net/gh/missdeer/cxxstd@master/_docs/C++11/n3337.pdf)，它与正式版标准文档(N3338)仅有微小的[差异](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3338.html)。官方标准文档[ISO/IEC 14882:2014 (2016)](https://webstore.ansi.org/RecordDetail.aspx?sku=INCITS/ISO/IEC+14882:2014+\(2016\))已合入C++14的内容。
 
 MSVC可以直接支持编译C++11代码，GCC和Clang需要在命令行参数指定`-std=c++11`，如：
 
