@@ -6,7 +6,7 @@ title: 前言
 
 ## C++03
 
-标准文档可阅读[ISO/IEC 14882](https://cdn.jsdelivr.net/gh/missdeer/cxxstd@gh-pages/C++03/c++2003std.pdf)。
+标准文档可阅读[ISO/IEC 14882](https://cdn.jsdelivr.net/gh/missdeer/cxxstd@master/_docs/C++03/c++2003std.pdf)。
 
 ## C++11
 
@@ -21,7 +21,7 @@ $clang -std=c++11 -o test main.cpp
 
 ## C++14
 
-标准文档可参考最终版草稿[N4140](https://cdn.jsdelivr.net/gh/missdeer/cxxstd@gh-pages/C++14/n4140.pdf)，它与正式版标准文档(N4141)仅有微小的[差异](https://github.com/cplusplus/draft/compare/n4140...n4141)。也可购买[ISO/IEC 14882:2014 (2016)](https://webstore.ansi.org/RecordDetail.aspx?sku=INCITS/ISO/IEC+14882:2014+\(2016\))。
+标准文档可参考最终版草稿[N4140](https://cdn.jsdelivr.net/gh/missdeer/cxxstd@master/_docs/C++14/n4140.pdf)，它与正式版标准文档(N4141)仅有微小的[差异](https://github.com/cplusplus/draft/compare/n4140...n4141)。也可购买[ISO/IEC 14882:2014 (2016)](https://webstore.ansi.org/RecordDetail.aspx?sku=INCITS/ISO/IEC+14882:2014+\(2016\))。
 
 MSVC可以直接支持编译C++14代码，GCC和Clang需要在命令行参数指定`-std=c++14`，如：
 
@@ -32,7 +32,7 @@ $clang -std=c++14 -o test main.cpp
 
 ## C++17
 
-标准文档可参考最终版草稿（即DIS，Draft International Standard）[N4660](https://cdn.jsdelivr.net/gh/missdeer/cxxstd@gh-pages/C++17/n4660.pdf)，它与正式版标准文档（N4661）只有微小的[差异](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4661.html)。也可以购买[ISO/IEC 14882:2017](https://www.iso.org/standard/68564.html)。
+标准文档可参考最终版草稿（即DIS，Draft International Standard）[N4660](https://cdn.jsdelivr.net/gh/missdeer/cxxstd@master/_docs/C++17/n4660.pdf)，它与正式版标准文档（N4661）只有微小的[差异](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4661.html)。也可以购买[ISO/IEC 14882:2017](https://www.iso.org/standard/68564.html)。
 
 MSVC 2017 15.7可以直接编译C++17代码，支持绝大多数C++17特性，GCC 8和Clang 5及更高版本支持全部C++17特性，需要在命令行参数指定`-std=c++17`，如：
 
@@ -43,7 +43,7 @@ $clang -std=c++17 -o test main.cpp
 
 ## C++20
 
-标准文档可参考最终版草稿（即DIS，Draft International Standard）[N4860](https://cdn.jsdelivr.net/gh/missdeer/cxxstd@gh-pages/C++20/N4860.pdf)。也可以购买[ISO/IEC 14882:2020](https://www.iso.org/standard/79358.html)。
+标准文档可参考最终版草稿（即DIS，Draft International Standard）[N4860](https://cdn.jsdelivr.net/gh/missdeer/cxxstd@master/_docs/C++20/N4860.pdf)。也可以购买[ISO/IEC 14882:2020](https://www.iso.org/standard/79358.html)。
 
 GCC和Clang需要在命令行参数指定`-std=c++20`，如：
 
