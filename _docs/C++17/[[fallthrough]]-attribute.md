@@ -45,4 +45,4 @@ case bad:
 }
 ```
 
-区别就是新增的`[[fallthrough]]`属性。如果这里不写`[[fallthrough]]`，编译也是能通过的，但会报诸如`warning: case statement without break`之类的警告。C++中`switch-case`默认是会继续往下走，有的时候程序员可能因为粗心会漏写`break`，就会导致非预期的运行逻辑，有的语言比如[Go](https://golang.org)则默认会跳出当前`case`，C++17中新增`[[fallthrough]]`属性可以提醒程序员这里正常逻辑应该是怎样的。
+区别就是新增的`[[fallthrough]]`属性。如果这里不写`[[fallthrough]]`，编译也是能通过的，但会报诸如`warning: case statement without break`之类的警告。C++中`switch-case`默认是会继续往下走，有的时候程序员可能因为粗心会漏写`break`，就会导致非预期的运行逻辑，有的语言比如[Go](https://go.dev)则默认会跳出当前`case`，C++17中新增`[[fallthrough]]`属性可以提醒程序员这里正常逻辑应该是怎样的。

@@ -11,7 +11,7 @@ order: 2
 >
 > 提案: [N1984(v1.0)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2006/n1984.pdf)
 
-自动类型推导是降低编码负担的一种手段，在其他编程语言比如[Go中也有类似的功能](https://golang.org/ref/spec#Short_variable_declarations)。C++11修改了关键字`auto`原有的作用，使其为自动类型推导所用。在C++11之前，template就已经具有类型推导能力，而C++11中增加的`auto`通常情况下就是使用template的类型推导方式：
+自动类型推导是降低编码负担的一种手段，在其他编程语言比如[Go中也有类似的功能](https://go.dev/ref/spec#Short_variable_declarations)。C++11修改了关键字`auto`原有的作用，使其为自动类型推导所用。在C++11之前，template就已经具有类型推导能力，而C++11中增加的`auto`通常情况下就是使用template的类型推导方式：
 
 ```c++
 int main(int argc, char *argv[]) 
