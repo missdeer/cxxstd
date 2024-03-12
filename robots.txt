@@ -1,0 +1,3 @@
+User-agent: *
+Sitemap: https://minidump.info/sitemap.xml
+Disallow: /search/
