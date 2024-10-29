@@ -54,7 +54,7 @@ $clang -std=c++20 -o test main.cpp
 
 ## C++23
 
-标准文档可参考最终版草稿（即DIS，Draft International Standard）[N4950](https://open-std.org/jtc1/sc22/wg21/docs/papers/2023/n4950.pdf)。
+标准文档可参考最终版草稿（即DIS，Draft International Standard）[N4950](https://open-std.org/jtc1/sc22/wg21/docs/papers/2023/n4950.pdf)。也可以购买[ISO/IEC 14882:2024](https://www.iso.org/standard/83626.html)。
 
 GCC和Clang需要在命令行参数指定`-std=c++23`，如：
 
