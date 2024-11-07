@@ -38,7 +38,7 @@ constexpr函数在编译期可计算，但也可以在运行时使用：
 
 ```cpp
 constexpr int square(int x) {
-return x x;
+    return x x;
 }
 // 编译期计算
 constexpr int sq_5 = square(5); // sq_5 = 25，编译期确定
@@ -61,7 +61,7 @@ int array[get_array_size()]; // OK，编译期可确定大小
 ```cpp
 template<int N>
 struct Array {
-int data[N];
+    int data[N];
 };
 constexpr int size = 10;
 Array<square(size)> arr; // OK，square(size)在编译期计算
@@ -71,7 +71,7 @@ Array<square(size)> arr; // OK，square(size)在编译期计算
 
 ```cpp
 constexpr int fibonacci(int n) {
-return (n <= 1) ? n : fibonacci(n-1) + fibonacci(n-2);
+    return (n <= 1) ? n : fibonacci(n-1) + fibonacci(n-2);
 }
 // 编译期就计算出结果
 constexpr int fib_10 = fibonacci(10);
@@ -121,9 +121,9 @@ int arr3[val3]; // OK，val3是编译期常量
 ```cpp
 // const成员函数：表示不会修改对象状态
 class MyClass {
-int value;
-public:
-int getValue() const { return value; } // 运行时执行
+    int value;
+    public:
+    int getValue() const { return value; } // 运行时执行
 };
 // constexpr函数：可在编译期执行
 constexpr int square(int x) { return x x; } // 编译期执行
@@ -148,12 +148,12 @@ constexpr int square(int x) { return x x; } // 编译期执行
 #define MAX_SIZE 100 // 无类型检查
 constexpr int MaxSize = 100; // 有类型检查
 void foo(short s) {
-#define SQUARE(x) ((x) (x))
-short s1 = SQUARE(s); // 可能溢出，无警告
-constexpr auto square = {
-return x x;
-};
-short s2 = square(s); // 编译器会进行类型检查
+    #define SQUARE(x) ((x) (x))
+    short s1 = SQUARE(s); // 可能溢出，无警告
+    constexpr auto square = {
+        return x x;
+    };
+    short s2 = square(s); // 编译器会进行类型检查
 }
 ```
 
@@ -166,6 +166,7 @@ short s2 = square(s); // 编译器会进行类型检查
 - constexpr：是正常的变量和函数，调试时可以看到具体值
 
 4. 主要优势对比：
+
 - #define：
   * 简单的文本替换
   * 可用于条件编译
